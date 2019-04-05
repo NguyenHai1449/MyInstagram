@@ -66,7 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
                 String str_password = password.getText().toString();
                 if (TextUtils.isEmpty(str_username) || TextUtils.isEmpty(str_fullname) || TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)){
                     Toast.makeText(RegisterActivity.this, "All fileds are required", Toast.LENGTH_SHORT).show();
-                } else  if (str_password.length() > 6)
+                } else  if (str_password.length() < 6)
                 {
                     Toast.makeText(RegisterActivity.this, "Password mut have 6 characters", Toast.LENGTH_SHORT).show();
                 }else {
