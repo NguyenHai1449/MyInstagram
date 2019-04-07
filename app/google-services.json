@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "115152163556",
-    "firebase_url": "https://myinstagram-cf4b2.firebaseio.com",
-    "project_id": "myinstagram-cf4b2",
-    "storage_bucket": "myinstagram-cf4b2.appspot.com"
+    "project_number": "699100944550",
+    "firebase_url": "https://myinstagram-57fd8.firebaseio.com",
+    "project_id": "myinstagram-57fd8",
+    "storage_bucket": "myinstagram-57fd8.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:115152163556:android:eb40e8c1c6a06b09",
+        "mobilesdk_app_id": "1:699100944550:android:eb40e8c1c6a06b09",
         "android_client_info": {
           "package_name": "nguyenhai1449.com.myinstagram"
         }
       },
       "oauth_client": [
         {
-          "client_id": "115152163556-pm26j66j2ea5oresm87hurrmm1i3ak4v.apps.googleusercontent.com",
+          "client_id": "699100944550-q32k7goidj18g76al1fo65p5q0tnbrf5.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "nguyenhai1449.com.myinstagram",
@@ -25,14 +25,14 @@
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDZeop6HdjEd0If29bYFa-A9C50hmojdRo"
+          "current_key": "AIzaSyAA2-k94fuaiRDNpI36b0AdAAdei1aWRo8"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "115152163556-d9hn679av7ah0ueeob1q56hcmntnr6mk.apps.googleusercontent.com",
+              "client_id": "699100944550-a2jfllgei3v07oin0q26ivcjiucec550.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
