@@ -69,7 +69,7 @@ public class HomeFragment extends Fragment {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 followingList.clear();
-                for(DataSnapshot snapshot : dataSnapshot.getChildren()){
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()){
                     followingList.add(snapshot.getKey());
                 }
                 readPosts();
@@ -98,6 +98,7 @@ public class HomeFragment extends Fragment {
                         }
                     }
                 }
+                postAdapter.notifyDataSetChanged();
             }
 
             @Override

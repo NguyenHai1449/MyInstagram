@@ -15,12 +15,8 @@
       },
       "oauth_client": [
         {
-          "client_id": "699100944550-q32k7goidj18g76al1fo65p5q0tnbrf5.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "nguyenhai1449.com.myinstagram",
-            "certificate_hash": "dbbfb28949ff203e6313ced612d05e6affadedd8"
-          }
+          "client_id": "699100944550-a2jfllgei3v07oin0q26ivcjiucec550.apps.googleusercontent.com",
+          "client_type": 3
         }
       ],
       "api_key": [

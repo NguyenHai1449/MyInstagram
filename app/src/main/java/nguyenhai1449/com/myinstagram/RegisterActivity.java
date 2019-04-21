@@ -32,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     FirebaseAuth auth;
     DatabaseReference reference;
     ProgressDialog progressDialog;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -91,23 +92,24 @@ public class RegisterActivity extends AppCompatActivity {
                     HashMap<String, Object> hashMap = new HashMap<>();
                     hashMap.put("id", userid);
                     hashMap.put("username", username.toLowerCase());
-                    hashMap.put("bio", "");
+                    hashMap.put("fullname", fullname);
                     hashMap.put("imageurl", "https://firebasestorage.googleapis.com/v0/b/myinstagram-57fd8.appspot.com/o/user.png?alt=media&token=56015490-2ada-4f95-ae9d-4e9b282144b2");
-
+                    hashMap.put("bio", "");
 
                     reference.setValue(hashMap).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
-                            if(task.isSuccessful()){
+                            if (task.isSuccessful()){
                                 progressDialog.dismiss();
                                 Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(intent);
                             }
                         }
                     });
-
-                }else {
-                    Toast.makeText(RegisterActivity.this, "You can't register with this email and password", Toast.LENGTH_SHORT).show();
+                } else {
+                    progressDialog.dismiss();
+                    Toast.makeText(RegisterActivity.this, "You can't register with this email or password", Toast.LENGTH_SHORT).show();
                 }
             }
         });

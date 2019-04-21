@@ -51,14 +51,14 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         final User user = mUsers.get(i);
         viewHolder.btn_follow.setVisibility(View.VISIBLE);
+        isFollowing(user.getId(), viewHolder.btn_follow);
         viewHolder.username.setText(user.getUsername());
         viewHolder.fullname.setText(user.getFullname());
+
+
         Glide.with(mContext).load(user.getImageurl()).into(viewHolder.image_profile);
-
-        isFollowing(user.getId(), viewHolder.btn_follow);
-
         if(user.getId().equals(firebaseUser.getUid())){
-            viewHolder.btn_follow.setVisibility(View.VISIBLE);
+            viewHolder.btn_follow.setVisibility(View.GONE);
         }
 
         viewHolder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -75,13 +75,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
             @Override
             public void onClick(View v) {
                 if(viewHolder.btn_follow.getText().toString().equals("follow")){
-                    FirebaseDatabase.getInstance().getReference().child("Follow").child(firebaseUser.getUid()).child("following").child(user.getId()).setValue(true);
-
-                    FirebaseDatabase.getInstance().getReference().child("followers").child(user.getId()).child("following").child(firebaseUser.getUid()).setValue(true);
+                    FirebaseDatabase.getInstance().getReference().child("Follow").child(firebaseUser.getUid())
+                            .child("following").child(user.getId()).setValue(true);
+                    FirebaseDatabase.getInstance().getReference().child("Follow").child(user.getId())
+                            .child("followers").child(firebaseUser.getUid()).setValue(true);
                 }else {
-                    FirebaseDatabase.getInstance().getReference().child("Follow").child(firebaseUser.getUid()).child("following").child(user.getId()).removeValue();
-
-                    FirebaseDatabase.getInstance().getReference().child("followers").child(user.getId()).child("following").child(firebaseUser.getUid()).removeValue();
+                    FirebaseDatabase.getInstance().getReference().child("Follow").child(firebaseUser.getUid())
+                            .child("following").child(user.getId()).removeValue();
+                    FirebaseDatabase.getInstance().getReference().child("Follow").child(user.getId())
+                            .child("followers").child(firebaseUser.getUid()).removeValue();
                 }
             }
         });
@@ -107,8 +109,8 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            username = itemView.findViewById(R.id.txtUserName);
-            fullname = itemView.findViewById(R.id.txtFullName);
+            username = itemView.findViewById(R.id.username);
+            fullname = itemView.findViewById(R.id.fullname);
             image_profile = itemView.findViewById(R.id.image_profile);
             btn_follow = itemView.findViewById(R.id.btn_follow);
 

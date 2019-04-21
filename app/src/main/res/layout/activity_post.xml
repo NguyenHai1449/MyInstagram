@@ -28,6 +28,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
                     android:src="@drawable/ic_close"
                     android:id="@+id/close"/>
 
@@ -37,10 +38,11 @@
                     android:layout_height="wrap_content"
                     android:text="POST"
                     android:id="@+id/post"
-                    android:textSize="16dp"
-                    android:layout_marginLeft="10dp"
+                    android:textSize="16sp"
+                    android:layout_marginRight="12dp"
                     android:layout_centerVertical="true"
                     android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
                     android:textColor="@color/colorPrimary"/>
             </RelativeLayout>
 
