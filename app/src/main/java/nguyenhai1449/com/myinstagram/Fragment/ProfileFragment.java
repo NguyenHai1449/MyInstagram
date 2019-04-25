@@ -31,6 +31,7 @@ import java.util.Collections;
 import java.util.List;
 
 import nguyenhai1449.com.myinstagram.Adapter.MyFotosAdapter;
+import nguyenhai1449.com.myinstagram.EditProfileActivity;
 import nguyenhai1449.com.myinstagram.Model.Post;
 import nguyenhai1449.com.myinstagram.Model.User;
 import nguyenhai1449.com.myinstagram.R;
@@ -45,12 +46,6 @@ public class ProfileFragment extends Fragment {
     TextView posts, followers, following, fullname, bio, username;
     Button edit_profile;
 
-    private List<String> mySaves;
-
-    RecyclerView recyclerView_saves;
-    MyFotosAdapter myFotosAdapter_saves;
-    List<Post> postList_saves;
-
     FirebaseUser firebaseUser;
     String profileid;
 
@@ -58,11 +53,15 @@ public class ProfileFragment extends Fragment {
     MyFotosAdapter myFotosAdapter;
     List<Post> postList;
 
+    private List<String> mySaves;
 
-
-
+    RecyclerView recyclerView_saves;
+    MyFotosAdapter myFotosAdapter_saves;
+    List<Post> postList_saves;
 
     ImageButton my_fotos, saved_fotos;
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -111,6 +110,8 @@ public class ProfileFragment extends Fragment {
         getNrPosts();
         myFotos();
         mySaves();
+
+
         if (profileid.equals(firebaseUser.getUid())){
             edit_profile.setText("Edit Profile");
         } else {
@@ -126,16 +127,16 @@ public class ProfileFragment extends Fragment {
 
                 if (btn.equals("Edit Profile")){
 
-
+                    //Go to edit profile
+                    startActivity(new Intent(getContext(), EditProfileActivity.class));
 
                 } else if (btn.equals("follow")){
-
                     FirebaseDatabase.getInstance().getReference().child("Follow").child(firebaseUser.getUid())
                             .child("following").child(profileid).setValue(true);
                     FirebaseDatabase.getInstance().getReference().child("Follow").child(profileid)
                             .child("followers").child(firebaseUser.getUid()).setValue(true);
-                } else if (btn.equals("following")){
 
+                } else if (btn.equals("following")){
                     FirebaseDatabase.getInstance().getReference().child("Follow").child(firebaseUser.getUid())
                             .child("following").child(profileid).removeValue();
                     FirebaseDatabase.getInstance().getReference().child("Follow").child(profileid)
@@ -144,11 +145,20 @@ public class ProfileFragment extends Fragment {
                 }
             }
         });
+
         my_fotos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 recyclerView.setVisibility(View.VISIBLE);
                 recyclerView_saves.setVisibility(View.GONE);
+            }
+        });
+
+        saved_fotos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recyclerView.setVisibility(View.GONE);
+                recyclerView_saves.setVisibility(View.VISIBLE);
             }
         });
        return  view;
