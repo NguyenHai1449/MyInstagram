@@ -203,6 +203,7 @@ public class EditProfileActivity extends AppCompatActivity {
         if (requestCode == CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE && resultCode == RESULT_OK){
             CropImage.ActivityResult result = CropImage.getActivityResult(data);
             uri = result.getUri();
+            uploadImage();
         }else {
             Toast.makeText(EditProfileActivity.this, "Something gone wrong !", Toast.LENGTH_SHORT).show();
         }
