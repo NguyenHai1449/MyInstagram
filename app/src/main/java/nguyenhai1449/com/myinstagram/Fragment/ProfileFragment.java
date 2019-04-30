@@ -28,6 +28,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 import nguyenhai1449.com.myinstagram.Adapter.MyFotosAdapter;
@@ -136,8 +137,8 @@ public class ProfileFragment extends Fragment {
                 String btn = edit_profile.getText().toString();
 
                 if (btn.equals("Edit Profile")){
-
-
+                    //Go to edit profile
+                    startActivity(new Intent(getContext(), EditProfileActivity.class));
 
                 } else if (btn.equals("follow")){
 
@@ -162,7 +163,47 @@ public class ProfileFragment extends Fragment {
                 recyclerView_saves.setVisibility(View.GONE);
             }
         });
+
+        saved_fotos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                recyclerView.setVisibility(View.GONE);
+                recyclerView_saves.setVisibility(View.VISIBLE);
+            }
+        });
+
+        followers.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), FollowersActivity.class);
+                intent.putExtra("id", profileid);
+                intent.putExtra("title", "followers");
+                startActivity(intent);
+            }
+        });
+
+        following.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), FollowersActivity.class);
+                intent.putExtra("id", profileid);
+                intent.putExtra("title", "following");
+                startActivity(intent);
+            }
+        });
        return  view;
+    }
+
+    private void addNotification(){
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("Notifications").child(profileid);
+
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("userid", firebaseUser.getUid());
+        hashMap.put("text", "started following you");
+        hashMap.put("postid", "");
+        hashMap.put("ispost", false);
+
+        reference.push().setValue(hashMap);
     }
 
     private void userInfo(){

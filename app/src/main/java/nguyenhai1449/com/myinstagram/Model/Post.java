@@ -4,14 +4,14 @@ public class Post {
 
     private String postid;
     private String postimage;
-    private String desciption;
+    private String description;
     private String publisher;
 
 
-    public Post(String postid, String postimage, String desciption, String publisher) {
+    public Post(String postid, String postimage, String description, String publisher) {
         this.postid = postid;
         this.postimage = postimage;
-        this.desciption = desciption;
+        this.description = description;
         this.publisher = publisher;
     }
 
@@ -34,12 +34,12 @@ public class Post {
         this.postimage = postimage;
     }
 
-    public String getDesciption() {
-        return desciption;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesciption(String desciption) {
-        this.desciption = desciption;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getPublisher() {
