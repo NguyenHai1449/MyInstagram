@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MyInstagram</string>
+    <string name="Email">Email</string>
+    <string name="FullName">Tên đầy đủ</string>
+    <string name="Password">Mật khẩu</string>
+    <string name="Username">Tên tài khoản</string>
+    <string name="btnLogin">ĐĂNG NHẬP</string>
+    <string name="btnRegister">ĐĂNG KÝ</string>
+    <string name="txtLogin">Đã có tài khoản? Đăng nhập</string>
+    <string name="txtRegister">Chưa có tài khoản? Đăng ký</string>
+    <string name="toastCanNotRegister">Bạn không thể đăng ký với email hoặc mật khẩu này</string>
+    <string name="toastInputAllFields">Vui lòng nhập tất cả các trường</string>
+    <string name="toastPassword6">Mật khẩu phải lớn hơn 6 ký tự</string>
+    <string name="toastPlease">Xin chờ..</string>
+    <string name="toastEmptyCommnet">Bạn không thể gửi comment trống</string>
+    <string name="followers">Người theo dõi</string>
+    <string name="following">Đang theo dõi</string>
+    <string name="toastSelectedImage">Không có hình ảnh được chọn</string>
+    <string name="toastSomethingwrong">Có gì đó không ổn!</string>
+    <string name="toastPosting">Đăng bài</string>
+    <string name="toastUploading">Đang tải lên</string>
+    <string name="toastFailed">Thất bại</string>
+    <string name="toastAutfailed">Đăng nhập thất bại</string>
+    <string name="toastSuccesupdated">Update thành công!</string>
+    <string name="Bio">Hastag</string>
+    <string name="ChangePhoto">Thay đổi</string>
+    <string name="editProfile">Chỉnh sửa hồ sơ</string>
+    <string name="follow">Theo dõi</string>
+    <string name="btnSave">Lưu</string>
+    <string name="logout">Đăng xuất</string>
+    <string name="setting">Cài đặt</string>
+    <string name="btnPost">Đăng</string>
+    <string name="Description">Mô tả</string>
+    <string name="Photo">Hình ảnh</string>
+    <string name="Search">Tìm kiếm..</string>
+</resources>

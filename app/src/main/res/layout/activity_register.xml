@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
-        android:hint="Username"
+        android:hint="@string/Username"
         android:layout_marginTop="15dp"
         android:padding="10dp"/>
 
@@ -30,7 +30,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
-        android:hint="Full Name"
+        android:hint="@string/FullName"
         android:layout_marginTop="15dp"
         android:padding="10dp"/>
 
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
-        android:hint="Email"
+        android:hint="@string/Email"
         android:inputType="textEmailAddress"
         android:layout_marginTop="15dp"
         android:padding="10dp"/>
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
-        android:hint="Password"
+        android:hint="@string/Password"
         android:inputType="textPassword"
         android:layout_marginTop="15dp"
         android:padding="10dp"/>
@@ -58,7 +58,7 @@
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="@string/btnRegister"
         android:layout_marginTop="15dp"
         android:textColor="@color/colorPrimary"
         android:background="@drawable/button_background"/>
@@ -68,6 +68,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Already have an account? Login"/>
+        android:text="@string/txtLogin"/>
 
 </LinearLayout>

@@ -135,7 +135,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
         reference.updateChildren(map);
 
-        Toast.makeText(EditProfileActivity.this, "Successfully updated!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(EditProfileActivity.this, R.string.toastSuccesupdated, Toast.LENGTH_SHORT).show();
     }
 
     private String getFileExtension(Uri uri){
@@ -146,7 +146,7 @@ public class EditProfileActivity extends AppCompatActivity {
 
     private void uploadImage(){
         final ProgressDialog pd = new ProgressDialog(this);
-        pd.setMessage("Uploading");
+        pd.setMessage(getResources().getString(R.string.toastUploading));
         pd.show();
 
         if (uri != null){
@@ -178,7 +178,7 @@ public class EditProfileActivity extends AppCompatActivity {
                         pd.dismiss();
 
                     } else {
-                        Toast.makeText(EditProfileActivity.this, "Failed", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(EditProfileActivity.this, R.string.toastFailed, Toast.LENGTH_SHORT).show();
                     }
                 }
             }).addOnFailureListener(new OnFailureListener() {
@@ -190,7 +190,7 @@ public class EditProfileActivity extends AppCompatActivity {
             });
 
         } else {
-            Toast.makeText(EditProfileActivity.this, "No image selected", Toast.LENGTH_SHORT).show();
+            Toast.makeText(EditProfileActivity.this, R.string.toastSelectedImage, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -205,7 +205,7 @@ public class EditProfileActivity extends AppCompatActivity {
             uri = result.getUri();
             uploadImage();
         }else {
-            Toast.makeText(EditProfileActivity.this, "Something gone wrong !", Toast.LENGTH_SHORT).show();
+            Toast.makeText(EditProfileActivity.this, R.string.toastSomethingwrong, Toast.LENGTH_SHORT).show();
         }
     }
 }

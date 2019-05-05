@@ -37,7 +37,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Edit Profile"
+                    android:text="@string/editProfile"
                     android:layout_centerVertical="true"
                     android:layout_marginStart="10dp"
                     android:textSize="18sp"
@@ -49,7 +49,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SAVE"
+                    android:text="@string/btnSave"
                     android:id="@+id/save"
                     android:layout_centerVertical="true"
                     android:layout_alignParentEnd="true"
@@ -83,7 +83,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Change Photo"
+            android:text="@string/ChangePhoto"
             android:layout_gravity="center"
             android:id="@+id/tv_change"
             android:textColor="@color/colorPrimary"
@@ -93,21 +93,21 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:hint="Full Name"
+            android:hint="@string/FullName"
             android:id="@+id/fullname"
             app:met_floatingLabel="normal"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Username"
+            android:hint="@string/Username"
             android:id="@+id/username"
             app:met_floatingLabel="normal"/>
 
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Bio"
+            android:hint="@string/Bio"
             android:id="@+id/bio"
             app:met_floatingLabel="normal"/>
 

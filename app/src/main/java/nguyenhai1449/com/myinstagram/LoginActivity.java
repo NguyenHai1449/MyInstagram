@@ -53,7 +53,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 final ProgressDialog progressDialog = new ProgressDialog(LoginActivity.this);
-                progressDialog.setMessage("Please wait..");
+                progressDialog.setMessage(getResources().getString(R.string.toastPlease));
                 progressDialog.show();
 
 
@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
                 String str_password = password.getText().toString();
 
                 if(TextUtils.isEmpty(str_email) || TextUtils.isEmpty(str_password)){
-                    Toast.makeText(LoginActivity.this, "All fileds are required", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, R.string.toastInputAllFields, Toast.LENGTH_SHORT).show();
                 }else {
                     auth.signInWithEmailAndPassword(str_email, str_password).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                         @Override
@@ -86,7 +86,7 @@ public class LoginActivity extends AppCompatActivity {
                                 });
                             }else {
                                 progressDialog.dismiss();
-                                Toast.makeText(LoginActivity.this, "Authentication failed!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(LoginActivity.this, R.string.toastAutfailed, Toast.LENGTH_SHORT).show();
                             }
                         }
                     });

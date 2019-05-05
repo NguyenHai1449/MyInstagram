@@ -2,5 +2,57 @@
     <string name="app_name">MyInstagram</string>
 
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+    <!--button-->
+    <string name="btnLogin">LOGIN</string>
+    <string name="btnRegister">REGISTER</string>
+    <string name="btnSave">SAVE</string>
+    <string name="btnPost">POST</string>
+
+    <string name="txtLogin">Already have an account? Login</string>
+    <string name="txtRegister">Do not have an account? Register</string>
+
+    <string name="Username">Username</string>
+    <string name="FullName">Full Name</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Bio">Bio</string>
+
+    <!--Toast Post & update image-->
+    <string name="toastUploading">Uploading..</string>
+    <string name="toastPosting">Posting..</string>
+    <string name="toastFailed">Failed!</string>
+    <string name="toastSuccesupdated">Successfully updated!</string>
+    <string name="toastSelectedImage">No image selected</string>
+    <string name="toastSomethingwrong">something gone wrong!</string>
+
+    <!--Toast Login & Register-->
+    <string name="toastPlease">Please wait..</string>
+    <string name="toastAutfailed">Authentication failed!</string>
+    <string name="toastCanNotRegister">You can not register with this email or password</string>
+    <string name="toastInputAllFields">All fields are required</string>
+    <string name="toastPassword6">Password must have 6 characters</string>
+    <string name="toastEmptyCommnet">You can not send empty comment</string>
+
+    <!--Follow & Following-->
+    <string name="followers">followers</string>
+    <string name="following">following</string>
+    <string name="editProfile">Edit Profile</string>
+    <string name="follow">follow</string>
+
+
+    <string name="ChangePhoto">Change Photo</string>
+    <string name="setting">Settings</string>
+    <string name="logout">Log Out</string>
+    <string name="Photo">Photo</string>
+    <string name="Description">Description</string>
+    <string name="Search">Search...</string>
+
+
+
+
+
+
+
 </resources>
