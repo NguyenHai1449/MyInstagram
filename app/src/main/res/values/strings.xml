@@ -44,6 +44,7 @@
 
     <string name="ChangePhoto">Change Photo</string>
     <string name="setting">Settings</string>
+    <string name="about">About</string>
     <string name="logout">Log Out</string>
     <string name="Photo">Photo</string>
     <string name="Description">Description</string>

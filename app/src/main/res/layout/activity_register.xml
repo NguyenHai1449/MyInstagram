@@ -13,7 +13,9 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
-        android:src="@drawable/logo" />
+        android:src="@drawable/instagram_logo"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="40dp"/>
     
     <EditText
         android:id="@+id/edtUsername"
@@ -21,6 +23,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
         android:hint="@string/Username"
+        android:textColorHint="#999999"
         android:layout_marginTop="15dp"
         android:padding="10dp"/>
 
@@ -31,6 +34,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
         android:hint="@string/FullName"
+        android:textColorHint="#999999"
         android:layout_marginTop="15dp"
         android:padding="10dp"/>
 
@@ -40,6 +44,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
         android:hint="@string/Email"
+        android:textColorHint="#999999"
         android:inputType="textEmailAddress"
         android:layout_marginTop="15dp"
         android:padding="10dp"/>
@@ -50,6 +55,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/edittext_background"
         android:hint="@string/Password"
+        android:textColorHint="#999999"
         android:inputType="textPassword"
         android:layout_marginTop="15dp"
         android:padding="10dp"/>
